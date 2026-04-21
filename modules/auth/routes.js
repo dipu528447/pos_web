@@ -4,8 +4,6 @@ const authController = require("./controller");
 
 
 router.post("/register", authController.register);
-// router.post("/login", authController.login);
-router.post("/login", (req, res) => {
-  res.json({ message: "Login working" });
-});
+router.post("/login", authController.login);
+
 module.exports = router;
