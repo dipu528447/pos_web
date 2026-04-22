@@ -1,7 +1,5 @@
-import mysql from "mysql2/promise";  // ✅ FIXED
-import dotenv from "dotenv";
-
-dotenv.config();
+const mysql = require("mysql2/promise");
+require("dotenv").config();
 
 const db = mysql.createPool({
   host: process.env.DB_HOST,
@@ -15,4 +13,4 @@ const db = mysql.createPool({
   queueLimit: 0,
 });
 
-export default db;
+module.exports = db;
